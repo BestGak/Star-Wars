@@ -85,7 +85,6 @@
         header {
             position: fixed;
             top: 20px;
-            max-width: 360px;
             display: flex;
             gap: 20px;
             left: 50%;
@@ -95,6 +94,41 @@
         h2 span {
             color: red;
             font-weight: 700;
+        }
+        @media screen and (max-width: 1200px){
+            div {
+                width: 30%;
+            }
+        }
+        @media screen and (max-width: 767px){
+            div {
+                width: 46%;
+            }
+            #content {
+                gap: 10px;
+            }
+        }
+        @media screen and (max-width: 550px){
+            div {
+                width: 100%;
+            }
+            #content {
+                gap: 10px;
+            }
+            button {
+                width: 48%;
+            }
+            header {
+                padding: 0 15px;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+                gap: 10px;
+            }
+            body {
+                padding-top: 150px;
+                background-size: 100% 100%;
+            }
         }
     </style>
     <header>
