@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+        #content,
+        .header__btns{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            border: none;
+            flex-direction: row;
+            width: 100%;
+            box-shadow: none;
+            background: transparent;
+            
+
+        }
+        .header__btns {
+            flex-wrap: nowrap;
+            padding: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .5s;
+        }
+        .planets .header__btns,
+        .planets #content {
+            visibility: visible;
+            opacity: 1;
+        }
+        .header__btns button:disabled {
+            cursor: not-allowed;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        div {
+            width: 18%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            gap: 20px;
+            padding: 25px;
+            border: 3px solid #333;
+            border-radius: 12px;
+            box-shadow: -1px -1px 12px #fff;
+            color: #fff;
+            background: #fff3;
+        }
+        body {
+            background: url(./plzcoaffexgf4h81.jpg) center center / cover no-repeat;
+            min-height: 100vh;
+            padding-top: 80px;
+        }
+        button {
+            background-color: #000;
+            color: #FFF;
+            font-family: "Star Wars";
+            font-size: 22px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 20px;
+            box-shadow: 0 5px 10px #000, 0 10px 20px #333, 0 15px 30px #666, 0 20px 40px #999;
+            cursor: pointer;
+            outline: none;
+            border: none;            
+        }
+        header {
+            position: fixed;
+            top: 20px;
+            max-width: 360px;
+            display: flex;
+            gap: 20px;
+            left: 50%;
+            transform: translate(-50% , 0);
+        }
+        span span,
+        h2 span {
+            color: red;
+            font-weight: 700;
+        }
+    </style>
+    <header>
+        <button onclick="getPeople()">Characters</button>
+        <button onclick="getPlanets(1)">Planets</button>
+        <div class="header__btns">
+        <button  onclick="getPlanets(--count)" class="prev header__prev-planet" disabled>Prev</button>
+        <button onclick="getPlanets(++count)" class="next header__next-planet">Next</button>
+        </div>
+    </header>
+    <div id="content"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
